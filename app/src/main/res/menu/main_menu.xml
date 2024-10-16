@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/profile"
+        android:icon="@drawable/man_icon"
+        android:id="@+id/profile_menu" />
+
+    <item android:title="@string/faqs"
+        android:icon="@drawable/faqs_icon"
+        android:id="@+id/faqs_menu" />
+
+    <item android:title="@string/voting_location"
+        android:icon="@drawable/geo_vote"
+        android:id="@+id/location_menu" />
+
+    <item android:title="@string/contact_us"
+        android:icon="@drawable/contactus_icon"
+        android:id="@+id/contact_menu"/>
+
+    <item android:title="@string/logout"
+        android:id="@+id/logout_menu"
+        android:icon="@drawable/logout_icon"/>
+</menu>

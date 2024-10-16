@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/registerActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvRegisterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/anek_devanagari_semibold"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Full Name Input -->
+    <EditText
+        android:id="@+id/etFullName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="name"
+        android:background="@drawable/edittextshape"
+        android:drawableStart="@drawable/user_icon"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/full_name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColorHint="@color/black" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/edittextshape"
+        android:drawableStart="@drawable/mail_icon"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/email_label"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColorHint="@color/black" />
+
+    <!-- Voter ID Input -->
+    <EditText
+        android:id="@+id/etVoterId"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="@string/voter_id"
+        android:background="@drawable/edittextshape"
+        android:drawableStart="@drawable/outline_badge_24"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/voter_id"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColorHint="@color/black" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/edittextshape"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/password_label"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColorHint="@color/black" />
+
+    <!-- Confirm Password Input -->
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints="password"
+        android:background="@drawable/edittextshape"
+        android:drawableStart="@drawable/lock_icon"
+        android:drawablePadding="5dp"
+        android:elevation="5dp"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColorHint="@color/black" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/anek_devanagari_semibold"
+        android:text="@string/register_btn_label"
+        android:textColor="@android:color/white" />
+
+    <!-- Already have an account -->
+    <TextView
+        android:id="@+id/tvAlreadyHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/anek_devanagari_semibold"
+        android:gravity="center"
+        android:text="@string/have_account"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</LinearLayout>
