@@ -19,7 +19,7 @@
     <string name="voting_location">Voting Location</string>
     <string name="vote_pm">Vote for Prime Minister</string>
     <string name="vote_pp">Vote for Political Party</string>
-    <string name="vote_wisely">Vote Wisely</string>
+    <string name="submit">Submit Vote</string>
     <string name="logout">Logout</string>
     <string name="navigation_drawer_open">Open Navigation</string>
     <string name="navigation_drawer_close">Close Navigation</string>
@@ -37,4 +37,6 @@
     <string name="send">Send Email</string>
     <string name="or">or</string>
     <string name="call">Call:</string>
+    <string name="party">Party</string>
+    <string name="candidate_name">Candidate Name</string>
 </resources>

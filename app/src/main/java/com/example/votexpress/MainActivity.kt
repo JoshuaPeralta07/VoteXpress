@@ -52,12 +52,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigationView.setNavigationItemSelectedListener(this)
 
         val btnVotePM = findViewById<Button>(R.id.button_vote_pm)
-        val btnVoteParty = findViewById<Button>(R.id.button_vote_party)
+        // val btnVoteParty = findViewById<Button>(R.id.button_vote_party)
 
-//        btnVotePM.setOnClickListener {
-//            val intent = Intent(this, votePMActivity::class.java)
-//            startActivity(intent)
-//        }
+        btnVotePM.setOnClickListener {
+            val intent = Intent(this, VotePMActivity::class.java)
+            startActivity(intent)
+        }
 //
 //        btnVoteParty.setOnClickListener {
 //            val intent = Intent(this, votePartyActivity::class.java)
@@ -85,24 +85,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.profile_menu -> {
                 //Handle Profile
             }
+
             R.id.faqs_menu -> {
                 //Handle FAQS
                 val intent = Intent(this, FAQsActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.location_menu -> {
                 val intent = Intent(this, MapsActivity::class.java)
                 startActivity(intent)
             }
+
             R.id.logout_menu -> {
                 //Handle Logout
                 logoutUser()
             }
+
             R.id.contact_menu -> {
                 //Handle Contact Us
                 val intent = Intent(this, ContactUsActivity::class.java)
                 startActivity(intent)
             }
+
             else -> {
                 // Handle other cases or do nothing
             }
@@ -118,7 +123,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         startActivity(intent)
         finish()
     }
-
 
 
 }
