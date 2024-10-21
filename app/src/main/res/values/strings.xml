@@ -39,4 +39,7 @@
     <string name="call">Call:</string>
     <string name="party">Party</string>
     <string name="candidate_name">Candidate Name</string>
+    <string name="back">Back</string>
+    <string name="leader">Leader</string>
+    <string name="profile_picture">Profile Picture</string>
 </resources>

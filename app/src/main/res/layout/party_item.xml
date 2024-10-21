@@ -6,40 +6,40 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tv_candidate_name"
+        android:id="@+id/tv_party_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/candidate_name"
-        android:fontFamily="@font/anek_devanagari_semibold"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_candidate_party"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:fontFamily="@font/anek_devanagari_semibold"
         android:text="@string/party"
         android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_party_leader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/anek_devanagari_semibold"
+        android:text="@string/leader"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_candidate_name" />
+        app:layout_constraintTop_toBottomOf="@id/tv_party_name" />
 
     <RadioButton
-        android:id="@+id/radio_button"
+        android:id="@+id/radio_button_party"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColorHighlight="@color/black"
         android:textColorLink="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_candidate_party" />
+        app:layout_constraintTop_toBottomOf="@id/tv_party_leader" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

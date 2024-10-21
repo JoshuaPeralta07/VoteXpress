@@ -1,5 +1,6 @@
 package com.example.votexpress
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -48,7 +49,10 @@ class VotePMActivity : AppCompatActivity() {
             val selectedCandidate = candidateAdapter.getSelectedCandidate()
             if (selectedCandidate != null) {
                 Toast.makeText(this, "You voted for ${selectedCandidate.name}", Toast.LENGTH_SHORT).show()
-                // Here, handle the submission of the vote (e.g., send it to the server or database)
+                // navigate to feedback
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Please select a candidate", Toast.LENGTH_SHORT).show()
             }

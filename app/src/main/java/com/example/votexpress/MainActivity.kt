@@ -52,17 +52,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigationView.setNavigationItemSelectedListener(this)
 
         val btnVotePM = findViewById<Button>(R.id.button_vote_pm)
-        // val btnVoteParty = findViewById<Button>(R.id.button_vote_party)
+        val btnVoteParty = findViewById<Button>(R.id.button_vote_party)
 
         btnVotePM.setOnClickListener {
             val intent = Intent(this, VotePMActivity::class.java)
             startActivity(intent)
         }
-//
-//        btnVoteParty.setOnClickListener {
-//            val intent = Intent(this, votePartyActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        btnVoteParty.setOnClickListener {
+            val intent = Intent(this, VotePartyActivityNew::class.java)
+            startActivity(intent)
+        }
+
 
         // Handle the back press using onBackPressedDispatcher
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -84,6 +85,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.profile_menu -> {
                 //Handle Profile
+                val intent = Intent(this, ProfileActivity::class.java)
+                startActivity(intent)
             }
 
             R.id.faqs_menu -> {
