@@ -1,5 +1,6 @@
 package com.example.votexpress
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -53,9 +54,19 @@ class RegisterActivity : AppCompatActivity() {
             val confirmPassword = confirmPasswordEditText.text.toString().trim()
 
             if(validateInput(fullName, email, voterId, password, confirmPassword)){
+                val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+
+                editor.putString("fullName", fullName)
+                editor.putString("email", email)
+                editor.putString("voterId", voterId)
+                editor.putString("password", password)
+                editor.putString("confirm_password", confirmPassword)
+                editor.apply()
+
                 Toast.makeText(this, "Registration successful!",Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
             }

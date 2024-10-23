@@ -42,4 +42,14 @@
     <string name="back">Back</string>
     <string name="leader">Leader</string>
     <string name="profile_picture">Profile Picture</string>
+    <string name="change_pp">Change Profile Picture</string>
+    <string name="username">User name</string>
+    <string name="user_email">user@email.com</string>
+    <string name="test_username">Test User</string>
+    <string name="test_email">Test Email</string>
+    <string name="rate_experience">Please rate your voting experience</string>
+    <string name="comments">Comments</string>
+    <string name="submit_feedback">Submit Feedback</string>
+    <string name="thanks">Thank you for using VoteXpress!</string>
+    <string name="finish">Close App</string>
 </resources>

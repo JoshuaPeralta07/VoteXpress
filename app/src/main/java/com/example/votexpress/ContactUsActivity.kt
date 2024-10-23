@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -36,6 +37,14 @@ class ContactUsActivity : AppCompatActivity() {
         message = findViewById(R.id.etMessage)
         btnSendEmail = findViewById(R.id.btnSend)
         phoneNumber = findViewById(R.id.tvPhoneNumber)
+        val btnBack = findViewById<ImageView>(R.id.ivBackBtnContact)
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
         btnSendEmail.setOnClickListener {
             sendEmail()

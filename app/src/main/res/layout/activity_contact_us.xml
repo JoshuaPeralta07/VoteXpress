@@ -9,6 +9,17 @@
     tools:context=".ContactUsActivity">
 
 
+    <ImageView
+        android:id="@+id/ivBackBtnContact"
+        android:layout_width="36dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/back"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
     <TextView
         android:id="@+id/tvContactUs"
         android:layout_width="wrap_content"
@@ -66,8 +77,8 @@
             android:hint="@string/subject"
             android:inputType="text"
             android:padding="12dp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <EditText
             android:id="@+id/etMessage"
@@ -82,8 +93,8 @@
             android:hint="@string/message"
             android:inputType="text"
             android:padding="12dp"
-            android:textColorHint="@color/black"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
         <Button
             android:id="@+id/btnSend"

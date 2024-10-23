@@ -57,7 +57,10 @@ class VotePartyActivityNew : AppCompatActivity() {
         btnSubmit.setOnClickListener {
             val selectedParty = partyAdapter.getSelectedParty()
             if(selectedParty != null){
-                Toast.makeText(this, "You voted for $(selectedParty.name)", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "You voted for ${selectedParty.name}", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, FeedbackActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Please select a party", Toast.LENGTH_SHORT).show()
             }

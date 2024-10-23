@@ -1,5 +1,6 @@
 package com.example.votexpress
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
@@ -59,8 +60,17 @@ class LoginActivity : AppCompatActivity() {
         val password = passwordEditText.text.toString().trim()
 
         if(validateInput(email, password)){
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+            val savedEmail = sharedPreferences.getString("email", null)
+            val savedPassword = sharedPreferences.getString("password", null)
+
+            if(email == savedEmail && password == savedPassword){
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+            }
         }
 
 
@@ -72,11 +82,11 @@ class LoginActivity : AppCompatActivity() {
             emailEditText.requestFocus()
             return false
         }
-//        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-//            emailEditText.error = "Please enter valid email"
-//            emailEditText.requestFocus()
-//            return false
-//        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            emailEditText.error = "Please enter valid email"
+            emailEditText.requestFocus()
+            return false
+        }
         if(TextUtils.isEmpty(password)) {
             passwordEditText.error = "Please enter your password"
             passwordEditText.requestFocus()

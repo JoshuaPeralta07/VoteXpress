@@ -1,6 +1,8 @@
 package com.example.votexpress
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
@@ -9,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -53,6 +56,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val btnVotePM = findViewById<Button>(R.id.button_vote_pm)
         val btnVoteParty = findViewById<Button>(R.id.button_vote_party)
+
+        // Vote for party button is disabled. User should vote for a PM first. After voting a PM
+        // button is enabled.
+        btnVoteParty.isEnabled = false
+        btnVoteParty.setTextColor(ContextCompat.getColor(this, android.R.color.darker_gray))
+
+        val sharedPreferences = getSharedPreferences("VotingPrefs", Context.MODE_PRIVATE)
+        val hasVotedForPM = sharedPreferences.getBoolean("hasVotedForPM", false)
+
+        // Checks if the user has voted for a PM and enables the button if true.
+        if(hasVotedForPM){
+            btnVoteParty.isEnabled = true
+            btnVoteParty.setTextColor(ContextCompat.getColor(this, android.R.color.white))
+        }
 
         btnVotePM.setOnClickListener {
             val intent = Intent(this, VotePMActivity::class.java)
@@ -121,6 +138,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun logoutUser() {
+        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.clear()
+        editor.apply()
+
         val intent = Intent(this, StartActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

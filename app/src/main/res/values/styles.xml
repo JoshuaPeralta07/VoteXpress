@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorControlActivated">#000000</item>
+        <item name="colorControlNormal">#E0E0E0</item>
+    </style>
+</resources>
