@@ -32,17 +32,12 @@ class LoginActivity : AppCompatActivity() {
         }
 
         val tvCreateAccount = findViewById<TextView>(R.id.tvCreateAccount)
-        val forgotPassword = findViewById<TextView>(R.id.tvForgotPassword)
 
         emailEditText = findViewById(R.id.etEmail)
         passwordEditText = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
 
 
-        forgotPassword.setOnClickListener {
-            //Handle forgot password activity
-            Toast.makeText(this, "Forgot password clicked!", Toast.LENGTH_SHORT).show()
-        }
 
         tvCreateAccount.setOnClickListener {
             val intent = Intent(this,RegisterActivity::class.java)
