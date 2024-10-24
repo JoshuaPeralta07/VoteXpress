@@ -52,4 +52,6 @@
     <string name="submit_feedback">Submit Feedback</string>
     <string name="thanks">Thank you for using VoteXpress!</string>
     <string name="finish">Close App</string>
+    <string name="web">Web</string>
+    <string name="ec_website">elections.nz</string>
 </resources>

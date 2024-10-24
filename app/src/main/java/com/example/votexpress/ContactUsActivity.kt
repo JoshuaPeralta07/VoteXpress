@@ -38,11 +38,19 @@ class ContactUsActivity : AppCompatActivity() {
         btnSendEmail = findViewById(R.id.btnSend)
         phoneNumber = findViewById(R.id.tvPhoneNumber)
         val btnBack = findViewById<ImageView>(R.id.ivBackBtnContact)
+        val txtLink = findViewById<TextView>(R.id.tvWebsite)
 
         btnBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        txtLink.setOnClickListener {
+            val url = "https://elections.nz"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
         }
 
 
